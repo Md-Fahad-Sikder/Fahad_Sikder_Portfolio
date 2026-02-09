@@ -54,13 +54,12 @@
 
 // CV Download Function
 function downloadCV() {
-    const link = document.createElement('a');
-    link.href = 'Fahad_skder_CV.pdf';
-    link.download = 'Fahad_Sikder_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    alert('Downloading CV...');
+    // Replace YOUR_FILE_ID with the actual file ID from your Google Drive link
+    const fileId = '1-jT0pgs3Upi5dIDc3ge-iDZM8BCgKY21';
+    const googleDriveUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    
+    // Open Google Drive download page in new tab
+    window.open(googleDriveUrl, '_blank');
 }
 
 // Active state management for navigation
